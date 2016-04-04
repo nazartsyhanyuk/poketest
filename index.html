@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Pokedex</title>
+    <meta name="description" content="pokedex" />
+    <meta name="theme-color" content="#EF5350">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
+    <link rel="icon" sizes="192x192" href="img/favicon_large.png">
+    <link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo" id="logo">
+    </header>
+    <main>
+        <div class="left-block" id="left_block">
+
+        <div class="pokemon_grid" id="pokemon_grid">
+
+        </div>
+        <div class="load_more" id="load_more"><h3>LOAD MORE</h3>
+                      </div>
+        </div>
+        <div class="full_information">
+           <div class="close_button">
+               <img src="img/close.png" alt="" id="close_details">
+           </div>
+            <img src="" alt="" id="full_image">
+            <h3 id="full_information_name"></h3>
+            <table id="full_properties">
+                <tr>
+                    <td>Types</td>
+                    <td id="full_types"></td>
+                </tr>
+                <tr>
+                    <td>Attack</td>
+                    <td id="full_attack"></td>
+                </tr>
+                <tr>
+                    <td>Defence</td>
+                    <td id="full_defense"></td>
+                </tr>
+                <tr>
+                    <td>HP</td>
+                    <td id="full_hp"></td>
+                </tr>
+                <tr>
+                    <td>SP Attack</td>
+                    <td id="full_sp_attack"></td>
+                </tr>
+                <tr>
+                    <td>SP Defence</td>
+                    <td id="full_sp_defense"></td>
+                </tr>
+                <tr>
+                    <td>Speed</td>
+                    <td id="full_speed"></td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td id="full_weight"></td>
+                </tr>
+                <tr>
+                    <td>Total moves</td>
+                    <td id="full_total_moves"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="libs/jquery/jquery-1.12.2.min.js"></script>
+    <script src="libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+    <!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>
