@@ -27,8 +27,8 @@
         padding-left: 10px;
         padding-right: 10px;
         border-bottom: 1px solid #EF5350;
-        text-align: left;
-        width: 100%;
+        text-align: center;
+        width: 50%;
     }
     .load_more {
         align-self: center;
@@ -61,8 +61,8 @@
         padding-left: 10px;
         padding-right: 10px;
         border-bottom: 1px solid #EF5350;
-        text-align: left;
-        width: 100%;
+        text-align: center;
+        width: 50%;
     }
     .load_more {
         align-self: center;

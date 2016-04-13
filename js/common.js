@@ -6,6 +6,7 @@ $(document).ready(function(){
                     type: 'GET',
                     beforeSend: function() {
                         $('#load_more').hide();
+                        $('#spinner').show();
                     },
                     url: 'http://pokeapi.co/api/v1/pokemon/?limit='+limit,
                     dataType: 'jsonp',
@@ -42,13 +43,15 @@ $(document).ready(function(){
         }   //add each generated element in parent container "pokemon_grid"
             $("#pokemon_grid").append(result);
             $('#load_more').show();
+            $('#spinner').hide();
     }
 
 
     //create event - when we click on a single pokemon item in the grid next to it we see details of this pokemon
     $('#pokemon_grid').on('click', '.pokemon', function(evt){
+        var preloader = $('#spinner');
+            preloader.show();
         evt.preventDefault();
-        $('.full_information').css('visibility','visible');
         var add_types='';
         var pokemon_id = $(this).attr('id').toString();
         //here we get an information about choosen pokemon
@@ -67,20 +70,30 @@ $(document).ready(function(){
             $('#full_sp_defense').text(data.sp_def);
             $('#full_speed').text(data.speed);
             $('#full_weight').text(data.weight);
-            $('#full_total_moves').text(data.moves.length);
+            $('#full_total_moves').text(data.moves.length);        
+            preloader.hide();
+            $('.full_information').css('visibility','visible');
         });
+            
     });
     //create event - when we click on "load more" button - we get a new 12 pokemons in pokemon grid
     $('#load_more').on('click', function(){
+        var preloader = $('#spinner');
         $('#pokemon_grid').append(function(){
             $.ajax({
                 type: 'GET',
+                beforeSend: function() {
+                    preloader.show();
+                },
                 url: 'http://pokeapi.co/api/v1/pokemon/?limit='+limit+'&offset='+offset,
                 dataType: 'jsonp',
                 cache: true,
                 success: create,
                 error: function() {
                     alert('Oops! Something wrong!');
+                },
+                complete: function() {
+                    preloader.hide();
                 }
         });
     });
