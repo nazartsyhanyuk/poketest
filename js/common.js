@@ -57,7 +57,7 @@ $(document).ready(function(){
         //here we get an information about choosen pokemon
         $.getJSON("http://pokeapi.co/api/v1/pokemon/"+pokemon_id, function(data) {
             //and here we add this information into a div and fill table cells in it
-            $('#full_image').attr('src','http://pokeapi.co/media/img/'+pokemon_id+'.png');
+            $('#full_image').attr('src','https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+pokemon_id+'.png');
             $('#full_information_name').text(data.name+(' #'+('000'.slice(pokemon_id.length)+pokemon_id)));
             for (var i=0; i<data.types.length; i++) {
                 add_types+= (data.types[i].name+' ');
