@@ -23,7 +23,7 @@ $(document).ready(function(){
             var Pokemon_object = mydata.objects[i];
             result += "<div class=\'pokemon\' id=\'"+Pokemon_object.national_id+"\'>";
             result += "<div class=\'sprite\'>";
-            result += "<img id=\'sprite\' src=\'http://pokeapi.co/media/img/"+Pokemon_object.national_id+".png\'>";
+            result += "<img id=\'sprite\' src=\'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+Pokemon_object.national_id+".png\'>";
             result += "</div>";
             result += "<h2 class=\'name_item\'>";
             result += "<span id=\'name\'>"+Pokemon_object.name+"</span>";
